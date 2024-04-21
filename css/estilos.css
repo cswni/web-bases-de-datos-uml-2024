@@ -1,0 +1,15 @@
+body {
+    color: brown;
+    background-color: azure;
+    background-image: url("../images/images.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    color: blue; /*Color de letra*/
+    font-size: 40px; /*Tamaño de letra*/
+    text-align: center; /*Alineación de texto*/
+    text-transform: uppercase; /*Transforma el texto a mayúsculas*/
+}
