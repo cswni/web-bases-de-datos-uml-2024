@@ -19,25 +19,28 @@ usando la notación var(--nombre-variable)
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     flex-direction: column;
-    height: 100vh; /* 100% del alto de la pantalla*/
+    height: 100vh;
+    /* 100% del alto de la pantalla*/
     margin: 0;
 }
 
 header {
     position: fixed;
     top: 0;
-    width: 100%;  
+    width: 100%;
     z-index: 10;
     box-shadow: 0 5px 10px 4px var(--color-sombra);
     max-height: 50px;
 }
-header p{
+
+header p {
     display: none;
     font-weight: bold;
 }
+
 header nav {
     display: flex;
     background-color: var(--color-primario);
@@ -48,7 +51,7 @@ header nav {
 header ul {
     display: flex;
     justify-content: flex-start;
-    gap:10px;
+    gap: 10px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -69,6 +72,7 @@ header li:hover {
     background-color: #f1f1f1;
     border-radius: 10px;
 }
+
 header li:hover a {
     color: black;
 }
@@ -86,29 +90,32 @@ aside {
     /*Animación*/
     transition: ease-in-out 1s;
     /*Separacion de la parte izquierda*/
-    padding:0 10px;
+    padding: 0 10px;
     overflow: none;
 }
 
-aside ul{
+aside ul {
     list-style-type: none;
     padding: 0;
 }
 
-aside li{
+aside li {
     padding: 5px;
     background-color: rgb(241, 234, 234);
     margin-top: 3px;
     border-radius: 5px;
 }
+
 aside li:hover {
     background-color: #f1f1f1;
     cursor: pointer;
 }
-aside li a{
+
+aside li a {
     text-decoration: none;
     color: black;
 }
+
 main {
     /*Indica que se ubica en un lugar fijo de la pantalla*/
     position: absolute;
@@ -117,7 +124,7 @@ main {
     left: 200px;
     right: 0;
     overflow: auto;
-    padding:0 35px;
+    padding: 0 35px;
     z-index: 1;
     background-color: white;
     overflow: auto;
@@ -132,12 +139,12 @@ main h1 {
 main section {
     margin-top: 20px;
     background-color: #f1f1f1;
-    padding: 5px; 
+    padding: 5px;
     border-radius: 5px;
     box-shadow: 0 5px 10px 4px #33333340;
 }
 
-main section form{
+main section form {
     display: flex;
     flex-direction: column;
 }
@@ -198,6 +205,7 @@ button {
     border-radius: 5px;
     color: white;
 }
+
 /*
  Estas reglas que llevan el selector @media screen and (max-width: 767px) son reglas que se aplican
     solo cuando el ancho de la pantalla es menor a 768px
@@ -217,22 +225,27 @@ button {
     .hamburger-menu {
         display: block;
     }
-    header nav ul  {
+
+    header nav ul {
         display: none;
     }
-    header p{
+
+    header p {
         flex-grow: 1;
         display: block;
     }
+
     aside {
         display: none;
-        top:0;
+        top: 0;
     }
+
     header {
         color: black;
     }
+
     main {
         left: 0;
-        padding:10px;
+        padding: 10px;
     }
 }

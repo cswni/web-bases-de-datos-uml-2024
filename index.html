@@ -1,128 +1,165 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
     <title>Sitio web de gestión de proyectos</title>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link
+      rel="stylesheet"
+      href="css/estilos.css" />
 
-    <!-- Meta image  -->
-    <meta property="og:image" content="images/image.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Diseño de proyectos">
+    <!-- HTML Meta Tags -->
+    <meta
+      name="description"
+      content="Sitio web de gestión de proyectos" />
 
-    <!-- Meta description -->
-    <meta name="description" content="Sitio web de gestión de proyectos">
-    <meta property="og:description" content="Sitio web de gestión de proyectos">
+    <!-- Facebook Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://cswni.github.io/web-bases-de-datos-uml-2024/" />
+    <meta
+      property="og:type"
+      content="website" />
+    <meta
+      property="og:title"
+      content="Gestión de proyectos" />
+    <meta
+      property="og:description"
+      content="Sitio web de gestión de proyectos" />
+    <meta
+      property="og:image"
+      content="https://cswni.github.io/web-bases-de-datos-uml-2024/image.png" />
 
-    <!-- Meta title -->
-    <meta property="og:title" content="Gestión de proyectos">
-    <meta property="og:site_name" content="Gestión de proyectos">
-
-    <!-- Meta URL -->
-    <meta property="og:url" content="https://cswni.github.io/web-bases-de-datos-uml-2024/">
-
-    <!-- Meta type -->
-    <meta property="og:type" content="website">
-</head>
-<body>
+    <!-- Twitter Meta Tags -->
+    <meta
+      name="twitter:card"
+      content="summary_large_image" />
+    <meta
+      property="twitter:domain"
+      content="cswni.github.io" />
+    <meta
+      property="twitter:url"
+      content="https://cswni.github.io/web-bases-de-datos-uml-2024/" />
+    <meta
+      name="twitter:title"
+      content="Gestión de proyectos" />
+    <meta
+      name="twitter:description"
+      content="Sitio web de gestión de proyectos" />
+    <meta
+      name="twitter:image"
+      content="https://cswni.github.io/web-bases-de-datos-uml-2024/images/image.png" />
+  </head>
+  <body>
     <header>
-        <nav>
-            <p>Gestión de proyectos</p>
-            <ul>
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Proyectos</a></li>
-                <li><a href="#">Miembros</a></li>
-                <li><a href="#">Reportes</a></li>
-            </ul>
-            <button class="hamburger-menu">
-                <img src="images/menu.svg" alt="Menu" width="20" height="20">
-            </button>
-        </nav>
+      <nav>
+        <p>Gestión de proyectos</p>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Proyectos</a></li>
+          <li><a href="#">Miembros</a></li>
+          <li><a href="#">Reportes</a></li>
+        </ul>
+        <button class="hamburger-menu">
+          <img
+            src="images/menu.svg"
+            alt="Menu"
+            width="20"
+            height="20" />
+        </button>
+      </nav>
     </header>
 
     <aside>
-        <h3>Proyectos</h3>
-        <ul>
-            <li><a href="index.html">Proyecto 1</a></li>
-            <li><a href="index.html">Proyecto 2</a></li>
-            <li><a href="index.html">Proyecto 3</a></li>
-            <li><a href="index.html">Proyecto 4</a></li>
-            <li><a href="index.html">Proyecto 5</a></li>
-
-        </ul>
+      <h3>Proyectos</h3>
+      <ul>
+        <li><a href="index.html">Proyecto 1</a></li>
+        <li><a href="index.html">Proyecto 2</a></li>
+        <li><a href="index.html">Proyecto 3</a></li>
+        <li><a href="index.html">Proyecto 4</a></li>
+        <li><a href="index.html">Proyecto 5</a></li>
+      </ul>
     </aside>
 
     <main>
-        <section style="padding: 0;">
-            <form >
-               <input type="search" id="buscar" name="buscar" placeholder="Buscar">
-            </form>
+      <section style="padding: 0">
+        <form>
+          <input
+            type="search"
+            id="buscar"
+            name="buscar"
+            placeholder="Buscar" />
+        </form>
+      </section>
+      <section>
+        <h1>Gestión de proyectos</h1>
+        <h2>Proyectos</h2>
+        <p>En esta sección se muestran los proyectos</p>
+      </section>
+      <div>
+        <section>
+          <h2>Miembros</h2>
+          <p>En esta sección se muestran los miembros</p>
         </section>
         <section>
-            <h1>Gestión de proyectos</h1>
-            <h2>Proyectos</h2>
-            <p>En esta sección se muestran los proyectos</p>
+          <h2>Reportes</h2>
+          <p>En esta sección se muestran los reportes</p>
         </section>
-        <div>
-            <section>
-                <h2>Miembros</h2>
-                <p>En esta sección se muestran los miembros</p>
-            </section>
-            <section>
-                <h2>Reportes</h2>
-                <p>En esta sección se muestran los reportes</p>
-            </section>
-        </div>
+      </div>
 
-        <div class="overlay"></div>
+      <div class="overlay"></div>
     </main>
 
     <footer>
-        <p>&copy; 2020 - Todos los derechos reservados</p>
+      <p>&copy; 2020 - Todos los derechos reservados</p>
     </footer>
 
     <script>
-        /*
+      /*
          Este codigo agrega funcionalidad al menu hamburguesa
          Oculta y muestra el aside al hacer click en el boton
          El boton es visible solo en pantallas con un ancho menor o igual a 768px
         */
-        let overlay = document.querySelector('.overlay');
-        let aside = document.querySelector('aside');
+      let overlay = document.querySelector('.overlay');
+      let aside = document.querySelector('aside');
 
-        document.querySelector('.hamburger-menu').addEventListener('click', function(event) {
-            aside.style.display = aside.style.display === 'none' ? 'block' : 'none';
-            overlay.style.display = overlay.style.display === 'none' ? 'block' : 'none';
-            event.stopPropagation();
-        });
-        
-        document.addEventListener('click', function(event) {
-            var isClickInside = aside.contains(event.target);
-        
-            if (!isClickInside && window.innerWidth <= 768) {
-                aside.style.display = 'none';
-                overlay.style.display = 'none';
-            }
+      document
+        .querySelector('.hamburger-menu')
+        .addEventListener('click', function (event) {
+          aside.style.display =
+            aside.style.display === 'none' ? 'block' : 'none';
+          overlay.style.display =
+            overlay.style.display === 'none' ? 'block' : 'none';
+          event.stopPropagation();
         });
 
-        /*
+      document.addEventListener('click', function (event) {
+        var isClickInside = aside.contains(event.target);
+
+        if (!isClickInside && window.innerWidth <= 768) {
+          aside.style.display = 'none';
+          overlay.style.display = 'none';
+        }
+      });
+
+      /*
             Este codigo muestra el aside si la pantalla es mayor a 768px
             Cuando se redimensiona la pantalla se muestra u oculta el aside
         */
-        window.addEventListener('resize', function() {
-            if (window.innerWidth > 768) {
-                aside.style.display = 'block';
-            } else {
-                aside.style.display = 'none';
-            }
-        });
+      window.addEventListener('resize', function () {
+        if (window.innerWidth > 768) {
+          aside.style.display = 'block';
+        } else {
+          aside.style.display = 'none';
+        }
+      });
 
-        // Show overlay when the aside is visible
-        document.querySelector('.overlay').addEventListener('click', function() {
-            aside.style.display = 'none';
-        });
+      // Show overlay when the aside is visible
+      document.querySelector('.overlay').addEventListener('click', function () {
+        aside.style.display = 'none';
+      });
     </script>
-</body>
+  </body>
 </html>
