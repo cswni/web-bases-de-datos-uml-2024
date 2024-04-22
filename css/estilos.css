@@ -1,15 +1,238 @@
-body {
-    color: brown;
-    background-color: azure;
-    background-image: url("../images/images.jpeg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+/*
+Definir las variables de color
+Estas variables se pueden utilizar en cualquier parte del documento
+usando la notación var(--nombre-variable)
+*/
+
+:root {
+    --color-primario: #0198e9;
+    --color-sombra: #e5e5e5;
+    --color-terciario: #33333340;
 }
 
-h1 {
-    color: blue; /*Color de letra*/
-    font-size: 40px; /*Tamaño de letra*/
-    text-align: center; /*Alineación de texto*/
-    text-transform: uppercase; /*Transforma el texto a mayúsculas*/
+/* El asterisco es un selector que afecta a todas las etiquetas y estructuras de nuestras páginas
+    box-sizing: border-box; indica que el tamaño de los elementos incluya el padding y el borde
+    de esta forma el tamaño total del elemento no cambia al agregar padding o borde
+*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;    
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* 100% del alto de la pantalla*/
+    margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;  
+    z-index: 10;
+    box-shadow: 0 5px 10px 4px var(--color-sombra);
+    max-height: 50px;
+}
+header p{
+    display: none;
+    font-weight: bold;
+}
+header nav {
+    display: flex;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 10px;
+}
+
+header ul {
+    display: flex;
+    justify-content: flex-start;
+    gap:10px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1;
+}
+
+header li {
+    padding: 5px;
+}
+
+header li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header li:hover {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+}
+header li:hover a {
+    color: black;
+}
+
+aside {
+    position: absolute;
+    top: 50px;
+    bottom: 52px;
+    left: 0;
+    width: 200px;
+    background-color: rgb(228, 223, 223);
+    /*Sombras*/
+    box-shadow: 5px 0 15px 4px var(--color-sombra);
+    z-index: 10;
+    /*Animación*/
+    transition: ease-in-out 1s;
+    /*Separacion de la parte izquierda*/
+    padding:0 10px;
+    overflow: none;
+}
+
+aside ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+aside li{
+    padding: 5px;
+    background-color: rgb(241, 234, 234);
+    margin-top: 3px;
+    border-radius: 5px;
+}
+aside li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+aside li a{
+    text-decoration: none;
+    color: black;
+}
+main {
+    /*Indica que se ubica en un lugar fijo de la pantalla*/
+    position: absolute;
+    top: 60px;
+    bottom: 50px;
+    left: 200px;
+    right: 0;
+    overflow: auto;
+    padding:0 35px;
+    z-index: 1;
+    background-color: white;
+    overflow: auto;
+}
+
+main h1 {
+    color: var(--color-primario);
+    border-bottom: 1px solid var(--color-primario);
+    font-size: 36px;
+}
+
+main section {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 5px; 
+    border-radius: 5px;
+    box-shadow: 0 5px 10px 4px #33333340;
+}
+
+main section form{
+    display: flex;
+    flex-direction: column;
+}
+
+/*Esta regla la vamos a mejorar con selectores específicos*/
+main section form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--color-primario);
+}
+
+main div {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Esta regla la vamos a mejorar con selectores específicos*/
+main div section {
+    width: 100%;
+}
+
+/*Esta regla no es para una etiqueta nativa. Es una regla que cada programador decide como emplearla
+ En este caso para mostrar un fondo oscuro cuando se muestra el menú lateral(hamburguesa)
+*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 5;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f1f1f1;
+    text-align: center;
+    border-top: 2px solid var(--color-primario);
+    z-index: 5;
+    box-shadow: 0 -5px 50px 4px var(--color-sombra);
+}
+
+/* Estilo para el menú hamburguesa, visible solo cuando la pantalla es pequeña */
+.hamburger-menu {
+    display: none;
+    /*Mostrar una mano al pasar el cursor sobre el elemento*/
+    cursor: pointer;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+/*
+ Estas reglas que llevan el selector @media screen and (max-width: 767px) son reglas que se aplican
+    solo cuando el ancho de la pantalla es menor a 768px
+
+    Esto se usa para lograr adaptabilidad en el diseño de la página
+*/
+
+/* Ocultar el menú hamburguesa en pantallas grandes */
+@media screen and (min-width: 768px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
+
+/* Mostrar el menú hamburguesa y ocultar el aside en pantallas pequeñas */
+@media screen and (max-width: 767px) {
+    .hamburger-menu {
+        display: block;
+    }
+    header nav ul  {
+        display: none;
+    }
+    header p{
+        flex-grow: 1;
+        display: block;
+    }
+    aside {
+        display: none;
+        top:0;
+    }
+    header {
+        color: black;
+    }
+    main {
+        left: 0;
+        padding:10px;
+    }
 }
