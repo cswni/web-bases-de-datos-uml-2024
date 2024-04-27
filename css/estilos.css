@@ -33,7 +33,7 @@ header {
     width: 100%;
     z-index: 10;
     box-shadow: 0 5px 10px 4px var(--color-sombra);
-    max-height: 50px;
+    max-height: 60px;/*le aumente la altura del header*/
 }
 
 header p {
@@ -45,32 +45,32 @@ header nav {
     display: flex;
     background-color: var(--color-primario);
     color: white;
-    padding: 10px;
+    padding: 15px;/*aumente el padding profe*/
 }
 
 header ul {
     display: flex;
     justify-content: flex-start;
-    gap: 10px;
+    gap: 20px;/*aumente el espacio entre los elementoss*/
     list-style-type: none;
     margin: 0;
-    padding: 0;
+    padding: 0px;
     flex-grow: 1;
 }
 
 header li {
-    padding: 5px;
+    padding: 5px;/*aumente el padding*/
 }
 
 header li a {
     color: white;
     text-decoration: none;
-    padding: 10px;
+    padding: 15px;/*aumente el padding*/
 }
 
 header li:hover {
     background-color: #f1f1f1;
-    border-radius: 10px;
+    border-radius: 15px;/*aumente el radio de bordes*/
 }
 
 header li:hover a {
@@ -79,7 +79,7 @@ header li:hover a {
 
 aside {
     position: absolute;
-    top: 50px;
+    top: 60px;/*se ajusto un poco el top para q no se interponga con su header*/
     bottom: 52px;
     left: 0;
     width: 200px;
@@ -90,7 +90,7 @@ aside {
     /*Animación*/
     transition: ease-in-out 1s;
     /*Separacion de la parte izquierda*/
-    padding: 0 10px;
+    padding: 0 10px;/*aumente padding*/
     overflow: none;
 }
 
@@ -100,10 +100,10 @@ aside ul {
 }
 
 aside li {
-    padding: 5px;
+    padding: 10px;/*aumente el padding*/
     background-color: rgb(241, 234, 234);
-    margin-top: 3px;
-    border-radius: 5px;
+    margin-top: 5px;/*aumente el margen*/
+    border-radius: 5px;/*aumente el radio del borde*/
 }
 
 aside li:hover {
@@ -119,9 +119,9 @@ aside li a {
 main {
     /*Indica que se ubica en un lugar fijo de la pantalla*/
     position: absolute;
-    top: 60px;
+    top: 60px;/*ajuste el top para evitar que se interponga con el  header*/
     bottom: 50px;
-    left: 200px;
+    left: 220px;/*aumente el espacio del aside*/
     right: 0;
     overflow: auto;
     padding: 0 35px;
@@ -132,15 +132,15 @@ main {
 
 main h1 {
     color: var(--color-primario);
-    border-bottom: 1px solid var(--color-primario);
-    font-size: 36px;
+    border-bottom: 2px solid var(--color-primario);/*aumente el grozor */
+    font-size: 40px;/*aumente tamano de la fuente*/
 }
 
 main section {
-    margin-top: 20px;
+    margin-top: 30px;/*aumente el msrgen*/
     background-color: #f1f1f1;
-    padding: 5px;
-    border-radius: 5px;
+    padding: 15px;/*aumente el padding*/
+    border-radius: 5px;/*aumente el radio*/
     box-shadow: 0 5px 10px 4px #33333340;
 }
 
@@ -151,9 +151,9 @@ main section form {
 
 /*Esta regla la vamos a mejorar con selectores específicos*/
 main section form input {
-    padding: 10px;
+    padding: 12px;/*aumente el padding*/
     border-radius: 5px;
-    border: 1px solid var(--color-primario);
+    border: 2px solid var(--color-primario);
 }
 
 main div {
@@ -184,7 +184,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 50px;
+    height: 60px;
     background-color: #f1f1f1;
     text-align: center;
     border-top: 2px solid var(--color-primario);
@@ -202,7 +202,7 @@ footer {
 button {
     background-color: transparent;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     color: white;
 }
 
@@ -246,6 +246,6 @@ button {
 
     main {
         left: 0;
-        padding: 10px;
+        padding: 20px;
     }
 }
