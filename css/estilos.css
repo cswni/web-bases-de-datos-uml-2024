@@ -114,7 +114,7 @@ aside li a {
 main {
     /*Indica que se ubica en un lugar fijo de la pantalla*/
     position: absolute;
-    top: 60px;
+    top: 70px;
     bottom: 50px;
     left: 200px;
     right: 0;
@@ -180,7 +180,7 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    height: 60px;
+    height: 48px;
     background-color: #f1f1f1;
     text-align: center;
     border-top: 2px solid var(--color-primario);
