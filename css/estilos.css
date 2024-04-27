@@ -5,7 +5,7 @@ usando la notación var(--nombre-variable)
 */
 
 :root {
-    --color-primario: #0198e9;
+    --color-primario: rgb(219, 62, 62);
     --color-sombra: #e5e5e5;
     --color-terciario: #33333340;
 }
@@ -19,7 +19,7 @@ usando la notación var(--nombre-variable)
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Montserrat", sans-serif;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -79,7 +79,7 @@ header li:hover a {
 
 aside {
     position: absolute;
-    top: 60px;/*se ajusto un poco el top para q no se interponga con su header*/
+    top: 73px;
     bottom: 52px;
     left: 0;
     width: 200px;
@@ -90,20 +90,15 @@ aside {
     /*Animación*/
     transition: ease-in-out 1s;
     /*Separacion de la parte izquierda*/
-    padding: 0 10px;/*aumente padding*/
+    padding: 0 10px;
     overflow: none;
 }
 
-aside ul {
-    list-style-type: none;
-    padding: 0;
-}
-
 aside li {
-    padding: 10px;/*aumente el padding*/
+    padding: 5px;
     background-color: rgb(241, 234, 234);
-    margin-top: 5px;/*aumente el margen*/
-    border-radius: 5px;/*aumente el radio del borde*/
+    margin-top: 3px;
+    border-radius: 5px;
 }
 
 aside li:hover {
@@ -119,9 +114,9 @@ aside li a {
 main {
     /*Indica que se ubica en un lugar fijo de la pantalla*/
     position: absolute;
-    top: 60px;/*ajuste el top para evitar que se interponga con el  header*/
+    top: 60px;
     bottom: 50px;
-    left: 220px;/*aumente el espacio del aside*/
+    left: 200px;
     right: 0;
     overflow: auto;
     padding: 0 35px;
@@ -132,12 +127,13 @@ main {
 
 main h1 {
     color: var(--color-primario);
-    border-bottom: 2px solid var(--color-primario);/*aumente el grozor */
-    font-size: 40px;/*aumente tamano de la fuente*/
+    border-bottom: 1px solid var(--color-primario);
+    font-size: 36px;
 }
 
 main section {
     margin-top: 30px;/*aumente el msrgen*/
+    margin: 10px 10px;
     background-color: #f1f1f1;
     padding: 15px;/*aumente el padding*/
     border-radius: 5px;/*aumente el radio*/
@@ -246,6 +242,6 @@ button {
 
     main {
         left: 0;
-        padding: 20px;
+        padding: 10px;
     }
 }
