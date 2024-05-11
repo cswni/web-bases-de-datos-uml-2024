@@ -5,7 +5,7 @@ usando la notación var(--nombre-variable)
 */
 
 :root {
-    --color-primario: #0198e9;
+    --color-primario: orange;
     --color-sombra: #e5e5e5;
     --color-terciario: #33333340;
 }
