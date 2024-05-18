@@ -81,8 +81,7 @@
     </header>
 
     <aside>
-      <h3>Proyectos 
-        <a class="agregar" href="nuevo-proyecto.html">Agregar proyecto</a>
+      <h3>Proyectos
       </h3>
       <ul id="proyectos"></ul>
     </aside>
@@ -97,22 +96,44 @@
             placeholder="Buscar" />
         </form>
       </section>
-      <section>
-        <h1>Gestión de proyectos - Carlos Andres Pérez</h1>
-        <h2>Proyectos</h2>
-        <p>En esta sección se muestran los proyectos</p>
-      </section>
-      <div>
-        <section>
-          <h2>Miembros</h2>
-          <p>En esta sección se muestran los miembros</p>
-        </section>
-        <section>
-          <h2>Reportes</h2>
-          <p>En esta sección se muestran los reportes</p>
-        </section>
-      </div>
 
+      <section>
+        <form method="post" id="agregar">
+            <h2>Agregar proyecto</h2>
+
+            <label for="nombre">Nombre</label>
+            <input
+                type="text"
+                id="nombre"
+                required />
+
+            <label for="descripcion">Descripción</label>
+            <textarea
+                id="descripcion"
+                required>
+            </textarea>
+
+            <label for="fecha_inicio">Fecha de inicio</label>
+            <input
+                type="date"
+                id="fecha_inicio"
+                required />
+            
+            <label for="fecha_fin">Fecha de fin</label>
+            <input
+                type="date"
+                id="fecha_fin"
+                required />
+            
+            <label for="presupuesto">Presupuesto</label>
+            <input
+                type="number"
+                id="presupuesto"
+                required />
+            <button type="submit">Guardar</button>
+        </form>
+      </section>
+      </div>
       <div class="overlay"></div>
     </main>
 
