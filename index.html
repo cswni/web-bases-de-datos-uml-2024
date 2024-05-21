@@ -60,19 +60,22 @@
       rel="icon"
       href="images/favicon.ico"
       type="image/x-icon" />
+
+      <script src="https://kit.fontawesome.com/79134ca9d0.js" crossorigin="anonymous"></script>
+	
       <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
       <nav>
         <p>Gestión de proyectos</p>
         <ul>
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Proyectos</a></li>
-          <li><a href="#">Miembros</a></li>
-          <li><a href="#">Reportes</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="miembros.html">Miembros</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
         </ul>
         <button class="hamburger-menu">
           <img
@@ -84,15 +87,14 @@
       </nav>
     </header>
 
-    <aside>
-      <h3>Proyectos</h3>
-      <ul>
-        <li><a href="index.html">Proyecto 1</a></li>
-        <li><a href="index.html">Proyecto 2</a></li>
-        <li><a href="index.html">Proyecto 3</a></li>
-        <li><a href="index.html">Proyecto 4</a></li>
-        <li><a href="index.html">Proyecto 5</a></li>
-      </ul>
+    <aside class="container"> 
+      <div class="container__div">
+      <span class="container__div-span">
+        <h3 class="container__div-span-h3">Proyectos </h3>
+      </span>
+      </div>
+      <button class="container__btn"><i class="fa-regular fa-folder"></i></i><a href="./nuevo-proyecto.html">Agregar Proyectos</a></button>
+      <ul id="proyectos"></ul>
     </aside>
 
     <main>
@@ -106,7 +108,7 @@
         </form>
       </section>
       <section>
-        <h1>Gestión de proyectos</h1>
+        <h1 style=" text-align: center;">Gestión de proyectos Alex Talavera</h1>
         <h2>Proyectos</h2>
         <p>En esta sección se muestran los proyectos</p>
       </section>
@@ -125,7 +127,7 @@
     </main>
 
     <footer>
-      <p>&copy; 2024 - Todos los derechos reservados</p>  <!--actualize la fecha-->
+      <p>&copy; 2024 - Todos los derechos reservados</p>
     </footer>
 
     <script>
@@ -173,5 +175,7 @@
         aside.style.display = 'none';
       });
     </script>
+
+    <script src="./js/proyectos.js"></script>
   </body>
 </html>

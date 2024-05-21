@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sitio web de gestión de proyectos</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+
+    <!-- HTML Meta Tags -->
+    <title>Gestión de proyectos</title>
+    <meta
+      name="description"
+      content="Optimiza la gestión de proyectos con nuestra plataforma en línea. Colabora, sigue y organiza tareas fácilmente para mejorar la productividad."
+    />
+
+    <!-- Open Graph Meta Tags -->
+    <meta
+      property="og:url"
+      content="https://cswni.github.io/web-bases-de-datos-uml-2024/"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Gestión de proyectos" />
+    <meta
+      property="og:description"
+      content="Optimiza la gestión de proyectos con nuestra plataforma en línea. Colabora, sigue y organiza tareas fácilmente para mejorar la productividad."
+    />
+    <meta
+      property="og:image"
+      content="https://cswni.github.io/web-bases-de-datos-uml-2024/images/image.png"
+    />
+    <meta property="og:image:width"" content="1237"> <meta
+    property="og:image:height"" content="775">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="cswni.github.io" />
+    <meta
+      property="twitter:url"
+      content="https://cswni.github.io/web-bases-de-datos-uml-2024/"
+    />
+    <meta name="twitter:title" content="Gestión de proyectos" />
+    <meta
+      name="twitter:description"
+      content="Optimiza la gestión de proyectos con nuestra plataforma en línea. Colabora, sigue y organiza tareas fácilmente para mejorar la productividad."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cswni.github.io/web-bases-de-datos-uml-2024/images/image.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Encode+Sans+Expanded:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <p>Gestión de proyectos</p>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="proyectos.html">Proyectos</a></li>
+          <li><a href="miembros.html">Miembros</a></li>
+          <li><a href="reportes.html">Reportes</a></li>
+        </ul>
+        <button class="hamburger-menu">
+          <img src="images/menu.svg" alt="Menu" width="20" height="20" />
+        </button>
+      </nav>
+    </header>
+
+    <aside class="container">
+      <div class="container__div">
+        <span class="container__div-span">
+          <h3 class="container__div-span-h3">Proyectos</h3>
+        </span>
+      </div>
+      <ul id="proyectos"></ul>
+    </aside>
+
+    <main style="overflow: hidden;">
+      <section>
+        <!-- creo un formulario y le pongo el metodo post -->
+        <form id="agregar" method="post">
+            <h2>Detalles del proyecto</h2>
+
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required />
+
+          <label for="descripcion">Descripcion</label>
+          <textarea id="descripcion" name="descripcion" required></textarea>
+
+          <label for="fecha-inicio">Fecha de Inicio</label>
+          <input type="date" id="fecha-inicio" name="fecha_inicio" required />
+
+          <label for="fecha-fin">Fecha de Fin</label>
+          <input type="date" id="fecha-fin" name="fecha_fin" required />
+
+          <label for="presupuesto">Presupuesto</label>
+          <input type="number" id="presupuesto" name="presupuesto" required />
+
+          <button class="btn-Guardar" type="submit">Actualizar</button>
+        </form>
+      </section>
+      <div class="overlay"></div>
+    </main>
+
+    <footer>
+      <p>&copy; 2024 - Todos los derechos reservados</p>
+    </footer>
+
+    <script>
+      /*
+         Este codigo agrega funcionalidad al menu hamburguesa
+         Oculta y muestra el aside al hacer click en el boton
+         El boton es visible solo en pantallas con un ancho menor o igual a 768px
+        */
+      let overlay = document.querySelector(".overlay");
+      let aside = document.querySelector("aside");
+
+      document
+        .querySelector(".hamburger-menu")
+        .addEventListener("click", function (event) {
+          aside.style.display =
+            aside.style.display === "none" ? "block" : "none";
+          overlay.style.display =
+            overlay.style.display === "none" ? "block" : "none";
+          event.stopPropagation();
+        });
+
+      document.addEventListener("click", function (event) {
+        var isClickInside = aside.contains(event.target);
+
+        if (!isClickInside && window.innerWidth <= 768) {
+          aside.style.display = "none";
+          overlay.style.display = "none";
+        }
+      });
+
+      /*
+            Este codigo muestra el aside si la pantalla es mayor a 768px
+            Cuando se redimensiona la pantalla se muestra u oculta el aside
+        */
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 768) {
+          aside.style.display = "block";
+        } else {
+          aside.style.display = "none";
+        }
+      });
+
+      // Show overlay when the aside is visible
+      document.querySelector(".overlay").addEventListener("click", function () {
+        aside.style.display = "none";
+      });
+    </script>
+
+    <script src="./js/proyectos-detalle.js"></script>
+  </body>
+</html>
